@@ -150,7 +150,7 @@ if ($action == 'confirm_clone' && $confirm == 'yes')
 	{
 		if ($id > 0) {
 			$object->fetch($id);
-			$result = $object->createFromClone(GETPOST('fk_userowner'), GETPOST('socid'));
+			$result = $object->createFromClone();
 			if ($result > 0) {
 				header("Location: " . $_SERVER['PHP_SELF'] . '?id=' . $result);
 				exit();
